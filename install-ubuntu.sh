@@ -6,6 +6,7 @@ echo *******************************************
 
 mkdir -p toolchain/build/
 cd toolchain/
+mkdir -p build/yosys/ && tar -xvzf yosys-0.9.tgz -C build/yosys/ --strip-components 1
 mkdir -p build/graywolf/ && tar -xvzf graywolf-0.1.6.patch.tgz -C build/graywolf/ --strip-components 1
 mkdir -p build/qrouter/ && tar -xvzf qrouter-1.4.59.tgz -C build/qrouter/ --strip-components 1
 mkdir -p build/magic/ && tar -xvzf magic-8.3.50.tgz -C build/magic/ --strip-components 1
@@ -33,14 +34,17 @@ sudo apt-get install automake --assume-yes
 sudo apt-get install libtool --assume-yes
 sudo apt-get install swig3.0 --assume-yes
 sudo apt-get install tcllib --assume-yes
-sudo apt-get install iverilog --assume-yes
-sudo apt-get install gtkwave --assume-yes
 
 echo *******************************************
 echo * Installing Yosys
 echo *******************************************
 
-sudo apt-get install yosys --assume-yes
+#git clone https://github.com/YosysHQ/yosys.git
+cd yosys/
+make config-gcc
+make
+sudo make install
+cd ../
 
 echo *******************************************
 echo * Installing Graywolf

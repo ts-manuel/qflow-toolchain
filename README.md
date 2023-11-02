@@ -21,15 +21,23 @@ This repository gathers all essential sources for compiling the Qflow toolchain,
 <!-- INSTALLING TOOLCHAIN -->
 ## Toolchain Installation
 
-To install the toolchain clone the repository on your machine and run the install script.
+To install the toolchain clone the repository on your machine and run the install script.\
+### Ubuntu:
 
     > git clone https://github.com/ts-manuel/qflow-toolchain.git
-    > cd vsdflow
+    > cd qflow-toolchain
     > ./install-ubuntu.sh
+
+### CentOS: 
+
+    > git clone https://github.com/ts-manuel/qflow-toolchain.git
+    > cd qflow-toolchain
+    > ./install-centos.sh
 
 ### Tested on
 + Ubuntu 22.04 LTS
 + Ubuntu 23.10
++ CentOS 7
 
 
 <!-- GETTING STARTED -->
