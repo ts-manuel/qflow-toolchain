@@ -21,7 +21,7 @@ echo *******************************************
 sudo yum update
 sudo yum install bison flex gawk \
     graphviz gcc gcc-c++ cmake python3 -y
-sudo yum install readline-devel libffi-devel python3-tkinter -y
+sudo yum install readline-devel libffi-devel libX11-devel libXt-devel python3-tkinter -y
 sudo yum install m4 mesa-libGL-devel freeglut freeglut-devel gsl-devel -y
 sudo yum install tk tk-devel tcsh -y
 sudo yum install autoconf -y
